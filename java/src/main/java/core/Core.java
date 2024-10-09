@@ -2,11 +2,26 @@ package core;
 
 public class Core {
     public static void main(String[] args) {
+
+        /*
+        * Variables
+        * */
+        {
+            byte $ = 1;
+            int € = 1;
+            int £ = 1;
+            //byte _ = 1; // Doesn't compile
+            byte b_ = 1;
+
+            //byte case = 1; //Doesn't compile. Reserved keyword.
+        }
+
         /*
          * Data types
          * */
         {
             boolean bool = false;
+            // boolean bool = 0; // Doesn't compile
 
             byte b = 100;
             //byte b1 = 300; // Doesn't compile
@@ -34,7 +49,12 @@ public class Core {
 
             char c = 'A';
             char c1 = 65;
-            System.out.printf("%s %s", c, c1); // A A
+
+            System.out.println("char c = 'A';");
+            System.out.println(c); // A
+
+            System.out.println("char c1 = 65;");
+            System.out.println(c1); // A
         }
 
         /*
@@ -42,13 +62,66 @@ public class Core {
          * */
         {
             // String Pool
+            String s1 = "aBcd";
+            String s2 = "aBcd";
+            System.out.printf("""
+                    s1: %s
+                    s2: %s
+                    """, s1, s2);
+
+            System.out.println("s1 == s2");
+            System.out.println(s1 == s2); // true
+
+            System.out.println("s1.equals(s2)");
+            System.out.println(s1.equals(s2)); // true
+
+            // String reference
+            String s3 = new String("b");
+            String s4 = new String("b");
+            System.out.printf("""
+                    s3: %s
+                    s4: %s
+                    """, s3, s4);
+
+            System.out.println("s3 == s4");
+            System.out.println(s3 == s4); // false
+
+            System.out.println("s3.equals(s4)");
+            System.out.println(s3.equals(s4)); // true
+
+            // Methods
+            System.out.println("s1.toLowerCase()");
+            System.out.println(s1.toLowerCase()); // abcd
+
+            System.out.println("s1.toUpperCase()");
+            System.out.println(s1.toUpperCase()); // ABCD
+
+            System.out.println("s1.charAt(0)");
+            System.out.println(s1.charAt(0)); // a
+
+            System.out.println("s1.charAt(1)");
+            System.out.println(s1.charAt(1)); // B
+
+            System.out.println("s1.charAt(5)");
+            System.out.println("StringIndexOutOfBoundsException"); // StringIndexOutOfBoundsException
         }
 
         /*
          * StringBuilder
          * */
         {
+            StringBuilder sb = new StringBuilder();
 
+            sb.append(1);
+            System.out.println("sb.append(1)");
+            System.out.println(sb); // 1
+
+            sb.insert(0, 2);
+            System.out.println("sb.insert(0, 2)");
+            System.out.println(sb); // 21
+
+            System.out.println("new StringBuilder().insert(0, 1)");
+            System.out.println(new StringBuilder().insert(0, 1)); // 1
         }
 
         /*

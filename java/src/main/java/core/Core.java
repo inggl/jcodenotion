@@ -12,6 +12,7 @@ public class Core {
             int £ = 1;
             //byte _ = 1; // Doesn't compile
             byte b_ = 1;
+            byte _b = 1;
 
             //byte case = 1; //Doesn't compile. Reserved keyword.
         }

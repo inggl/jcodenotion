@@ -18,6 +18,13 @@ public class Core {
             byte _b = 1;
 
             //byte case = 1; //Doesn't compile. Reserved keyword.
+            var var = 1; // var is not reserved keyword
+
+            //var x; // Doesn't compile.
+            //var x=5, y = 6; // Doesn't compile.
+
+            int a;
+            //System.out.println(a); // Doesn't compile. Local variable must be initialized before usage.
         }
 
         /*
@@ -64,13 +71,27 @@ public class Core {
             //double d = 100._0; // Doesn't compile!
 
             char c = 'A';
-            char c1 = 65;
-
-            System.out.println("char c = 'A';");
+            System.out.println("char c = 'A'");
             System.out.println(c); // A
 
-            System.out.println("char c1 = 65;");
+            char c1 = 65;
+            System.out.println("char c1 = 65");
             System.out.println(c1); // A
+
+            char c2 = '\u0061';
+            System.out.println("char c2 = '\\u0061'");
+            System.out.println(c2); // a
+        }
+
+        /*
+        * Operators
+        * */
+        {
+            // instanceof
+            System.out.println("null instanceof String");
+            System.out.println(null instanceof String); // always false!
+
+            //System.out.println((new Object()) instanceof null); // Doesn't compile
         }
 
         /*

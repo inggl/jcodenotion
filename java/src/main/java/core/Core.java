@@ -1,5 +1,8 @@
 package core;
 
+import java.util.Date;
+import java.sql.*;
+
 public class Core {
     public static void main(String[] args) {
 
@@ -15,6 +18,18 @@ public class Core {
             byte _b = 1;
 
             //byte case = 1; //Doesn't compile. Reserved keyword.
+        }
+
+        /*
+        * Packages
+        * */
+        {
+            Date date = new Date(); // java.util.Date
+
+            // Conflicts
+            // import java.sql.Date;
+            // To resolve use wildcard import java.sql.*;
+
         }
 
         /*
